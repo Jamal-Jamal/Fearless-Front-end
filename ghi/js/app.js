@@ -18,8 +18,8 @@ function createCard(name, description, pictureUrl, location, start, end) {
                 </div>
             </div>
         </div>
-        `;
-    }
+    `;
+  }
 
   window.addEventListener('DOMContentLoaded', async () => {
 
@@ -37,16 +37,16 @@ function createCard(name, description, pictureUrl, location, start, end) {
           const detailUrl = `http://localhost:8000${conference.href}`;
           const detailResponse = await fetch(detailUrl);
           if (detailResponse.ok) {
-            const details = await detailResponse.json();
-            const name = details.conference.name;
-            const description = details.conference.description;
-            const pictureUrl = details.conference.location.picture_url;
-            const location = details.conference.location.name;
-            const start = new Date(details.conference.starts);
-            const end = new Date(details.conference.ends);
-            const html = createCard(name, description, pictureUrl, location, start.toLocaleDateString(), end.toLocaleDateString());
-            const column = document.querySelector('.row');
-            column.innerHTML += html;
+            const details = await detailResponse.json()
+            const name = details.conference.name
+            const description = details.conference.description
+            const pictureUrl = details.conference.location.picture_url
+            const location = details.conference.location.name
+            const start = new Date(details.conference.starts)
+            const end = new Date(details.conference.ends)
+            const html = createCard(name, description, pictureUrl, location, start.toLocaleDateString(), end.toLocaleDateString())
+            const column = document.querySelector('.row')
+            column.innerHTML += html
             //console.log(html);
           }
         }
