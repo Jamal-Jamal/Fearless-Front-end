@@ -12,6 +12,7 @@ class LocationListEncoder(ModelEncoder):
     properties = [
         "name",
         "picture_url",
+        "id"
     ]
 
 
@@ -24,6 +25,7 @@ class LocationDetailEncoder(ModelEncoder):
         "created",
         "updated",
         "picture_url",
+
     ]
 
     def get_extra_data(self, o):
@@ -32,7 +34,11 @@ class LocationDetailEncoder(ModelEncoder):
 
 class ConferenceListEncoder(ModelEncoder):
     model = Conference
-    properties = ["name"]
+    properties = [
+        "name",
+        "id"
+        ]
+
 
 
 class ConferenceDetailEncoder(ModelEncoder):
@@ -255,5 +261,3 @@ def api_list_states(request):
         # abbreviation for each state
 
         # Append the dictionary to the list
-
-    
