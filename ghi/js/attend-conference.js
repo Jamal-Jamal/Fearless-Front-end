@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             formTag.reset()
             const newAttnedee = await response.json()
             document.getElementById("success-message").classList.remove("d-none");
-            document.getElementById("conference").classList.add("d-none");
+            document.getElementById("create-attendee-form").classList.add("d-none");
 
         }
       });
