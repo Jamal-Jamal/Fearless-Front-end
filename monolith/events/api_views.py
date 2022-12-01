@@ -245,7 +245,7 @@ def api_list_states(request):
     state_list = []
     for state in states:
         dict = {
-            "abr": state.abbreviation,
+            "abbreviation": state.abbreviation,
             "name": state.name,
         }
         state_list.append(dict)
