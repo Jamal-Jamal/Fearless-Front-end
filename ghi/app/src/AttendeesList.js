@@ -1,3 +1,5 @@
+import React from 'react';
+
 function AttendeeList(props) {
     return (
         <table className="table table-striped">

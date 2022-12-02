@@ -93,7 +93,7 @@ services:
     ports:
       - 15432:5432
   react:
-    image: node:latest
+    image: node:16
     command: npm start
     working_dir: /app
     volumes:

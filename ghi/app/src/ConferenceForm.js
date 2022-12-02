@@ -120,7 +120,7 @@ class ConferenceForm extends React.Component {
               </div>
               <div className="mb-3">
                 <label htmlFor="description">Description</label>
-                <textarea onChange={this.handleChangeDescription} className="form-control" id="description" rows="3" name="description" className="form-control"></textarea>
+                <textarea onChange={this.handleChangeDescription} className="form-control" id="description" rows="3" name="description" ></textarea>
               </div>
               <div className="form-floating mb-3">
                 <input onChange={this.handleChangeMaxPresentations} placeholder="Maximum presentations" required type="number" name="max_presentations" id="max_presentations" className="form-control" />
